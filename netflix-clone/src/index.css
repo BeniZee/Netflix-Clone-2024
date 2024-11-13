@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --font-bash: 'Lexend', sans-serif;;
+  --font-second-bash: 'Inter', sans-serif;
+  --bg-color:#111;
+  --primary-color:#ffffff;
+  --secondary-color:#e50914;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #111;
+}
