@@ -28,7 +28,7 @@ function Header() {
           <li><SearchIcon/></li>
           <li><NotificationsNoneIcon/></li>
           <li><AccountBoxIcon/></li>
-            <li><ArrowDropDownIcon/></li>
+            {/* <li><ArrowDropDownIcon/></li> */}
           </ul>
         </div>
       </div>
