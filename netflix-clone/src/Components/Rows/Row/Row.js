@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import "./row.css";
+import "./Row.css";
 import axios from "../../../utils/axios";
 import movieTrailer from 'movie-trailer';
 import YouTube from 'react-youtube';
+
 const Row = ({ title, fetchUrl, isLargeRow }) => {
     const [movies, setMovie] = useState([]);
     const [trailerUrl, setTrailerUrl] = useState("");
+
     const base_url = "https://image.tmdb.org/t/p/original";
+
+
     useEffect(() => {
         (async () => {
             try {
@@ -19,6 +23,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
             }
         })()
     }, [fetchUrl]);
+
     const handleClick = (movie) => {
         if (trailerUrl) {
             setTrailerUrl('')
@@ -33,6 +38,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
                 })
         }
     }
+
     const opts = {
         height: '390',
         width: "100%",
@@ -40,6 +46,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
             autoplay: 1,
         },
     }
+
     return (
         <div className="row">
             <h1>{title}</h1>
@@ -57,4 +64,5 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
         </div>
     )
 }
+
 export default Row
